@@ -37,19 +37,14 @@ public class Main {
 
     public static int  deliveryDistance(int deliveryDistance) {
         int day=0;
-        if (deliveryDistance > 100) {
-            System.out.println(" Доставка не осуществляется");}
-        else if (deliveryDistance<=20) {
+        if (deliveryDistance<=20) {
             day=day+1;
-            System.out.println(day);
         }
         else if
-        (deliveryDistance > 20 && deliveryDistance < 60) {
+        (deliveryDistance > 20 && deliveryDistance <= 60) {
             day=day+2;
-            System.out.println(day);
-        } else {
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
             day=day+3;
-            System.out.println(day);
         }
         return day;
     }
@@ -78,7 +73,8 @@ public class Main {
     }
     public static void task3() {
         System.out.println("Задача 3");
-        deliveryDistance();
+
+        System.out.println(deliveryDistance(99));
 
     }
 
